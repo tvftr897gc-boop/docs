@@ -5,7 +5,15 @@ description: "Install the Chunky plugin or mod and pre-generate your Minecraft w
 
 Chunky is a free, open-source plugin and mod that pre-generates chunks of your Minecraft world ahead of time. By generating terrain before players reach it, you eliminate the lag spikes that happen when the server has to create new chunks on the fly. The result is a noticeably smoother experience, especially on survival and exploration servers.
 
-Pre-generation does come with a tradeoff: every generated chunk takes up disk space. **Always cap the radius of your pre-generation** so you don't fill your server's storage. We recommend a radius between **2,000 and 5,000 blocks** for most servers.
+Pre-generation does come with tradeoffs:
+
+- **Disk space.** Every generated chunk is written to disk. While all Sculk Hosting plans include unmetered NVMe storage, a fair-use soft limit of **100 GB** applies — generating an entire world will blow past it long before players ever reach the edge.
+- **Generation time and CPU load.** Pre-generation is CPU-intensive. Generating millions of chunks can take days of continuous load and degrades performance for anyone playing while it runs.
+- **Backup and restore overhead.** Larger worlds mean larger [backups](/panel/backups), longer save times, and slower restores if something goes wrong.
+- **Diminishing returns.** Players almost never travel more than a few thousand blocks from spawn. Pre-generating beyond that wastes resources on terrain no one will see.
+
+**Always cap the radius of your pre-generation.** A radius between **2,000 and 5,000 blocks** works well for most servers.
+
 
 ## Installing Chunky
 
