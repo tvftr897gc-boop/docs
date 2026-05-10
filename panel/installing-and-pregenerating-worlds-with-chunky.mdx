@@ -5,7 +5,11 @@ description: "Install the Chunky plugin or mod and pre-generate your Minecraft w
 
 Chunky is a free, open-source plugin and mod that pre-generates chunks of your Minecraft world ahead of time. By generating terrain before players reach it, you eliminate the lag spikes that happen when the server has to create new chunks on the fly. The result is a noticeably smoother experience, especially on survival and exploration servers.
 
-Pre-generation does come with a tradeoff: every generated chunk takes up disk space. **Always cap the radius of your pre-generation** so you don't fill your server's storage. We recommend a radius between **2,000 and 5,000 blocks** for most servers.
+Pre-generation does come with tradeoffs. Every generated chunk takes up disk space, and — more importantly — **larger worlds slow your whole server down**. Backups take longer and grow significantly larger, world loading and saving stalls become more frequent, and chunk-related lag actually gets worse over time as more terrain accumulates. **Always cap the radius of your pre-generation.** We recommend a radius between **2,000 and 5,000 blocks** for most servers.
+
+<Note>
+  Sculk Hosting plans include unmetered storage, but the platform has a soft cap around 100 GB. Even well below that cap, oversized worlds hurt server performance — so cap your radius based on what your players will actually explore, not based on how much disk you have available.
+</Note>
 
 ## Installing Chunky
 
@@ -47,7 +51,7 @@ Chunky works on Bukkit, Spigot, Paper, Purpur, Fabric, Forge, and NeoForge. Use 
 Once Chunky is installed and the server has restarted, run pre-generation commands from the **Console** tab.
 
 <Warning>
-  Pre-generated chunks are written to disk and **count against your server's storage quota**. A radius of 5,000 blocks generates roughly 1–3 GB of world data, depending on biomes and structures. A radius of 10,000 blocks can exceed 10 GB. Always set a reasonable radius before starting.
+  Bigger worlds = slower servers. A radius of 5,000 blocks generates roughly 1–3 GB of world data; a radius of 10,000 blocks can exceed 10 GB. Beyond disk usage, large worlds make backups slower and larger, increase world save/load times, and can cause periodic stalls as more chunks need to be tracked. Set a reasonable radius before starting.
 </Warning>
 
 <Steps>
@@ -82,7 +86,7 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
     | Medium community      | 2,000–5,000     | ~1–3 GB                |
     | Large public          | 5,000–10,000    | ~3–10 GB               |
 
-    Stay well below your plan's storage limit. Check current usage in the panel sidebar before deciding.
+    Pick the smallest radius that covers what your players will actually explore. A bigger world doesn't mean a better one — it means slower backups, longer save times, and more strain on the server.
   </Step>
   <Step title="Start generation">
     Begin pre-generating:
@@ -122,5 +126,5 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
 - **Don't re-run unnecessarily.** Once chunks are generated, they're saved permanently. You only need to pre-generate again if you expand the playable area.
 
 <Note>
-  If you fill your storage quota, your server may fail to save world data or stop responding. If you're unsure how much space your plan includes, check your current usage in the panel or contact [support](/help/contact-support) before running large pre-generations.
+  Sculk Hosting plans include unmetered storage with a soft cap near 100 GB, so you're unlikely to "run out of disk" mid-generation. The real reason to keep your radius small is **server performance** — large worlds hurt backup speed, world load times, and overall TPS. If you need to pre-generate a very large area, contact [support](/help/contact-support) first.
 </Note>
