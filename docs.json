@@ -1,0 +1,94 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Sculk Hosting",
+  "description": "Documentation for Sculk Hosting — high-performance game server hosting built for gamers.",
+  "colors": {
+    "primary": "#5dd5fc",
+    "light": "#94e5fc",
+    "dark": "#5dd5fc"
+  },
+  "favicon": "https://media.brand.dev/d0efe91e-ccbd-4b1e-a215-9828f0b1dbc4.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant"]
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/create-account",
+              "getting-started/choose-a-plan",
+              "getting-started/quick-start"
+            ]
+          },
+          {
+            "group": "Control Panel",
+            "pages": [
+              "panel/overview",
+              "panel/console",
+              "panel/file-manager",
+              "panel/plugin-manager",
+              "panel/backups",
+              "panel/installing-and-pregenerating-worlds-with-chunky"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/ddos-protection",
+              "features/server-locations",
+              "features/performance",
+              "features/sub-users"
+            ]
+          },
+          {
+            "group": "Billing & Account",
+            "pages": [
+              "billing/plans-pricing",
+              "billing/billing-cycles",
+              "billing/cancellation",
+              "billing/sla"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/contact-support",
+              "help/terms-of-service"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://my.sculkhosting.com"
+    }
+  },
+  "logo": "/images/sculkhosting-logo-text-full-transparent.png",
+  "appearance": {
+    "default": "system"
+  },
+  "background": {
+    "color": {
+      "dark": "#0b0d12"
+    },
+    "decoration": "windows"
+  }
+}

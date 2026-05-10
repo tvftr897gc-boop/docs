@@ -1,0 +1,56 @@
+---
+title: "Installing Plugins and Mods with One Click"
+description: "Search, install, and update Minecraft plugins and game mods directly from the Sculk Hosting control panel — no manual file transfers or FTP access required."
+---
+
+The Sculk Hosting plugin manager lets you find, install, and update plugins and mods without ever touching a file. Search by name, click install, and the panel handles the download and placement automatically. When updates are released, you can apply them the same way — keeping your server current with zero manual effort.
+
+## What the plugin manager does
+
+- Searches a curated library of plugins and mods from the panel interface
+- Downloads and installs files directly to the correct server directory with one click
+- Flags installed plugins that have updates available and lets you apply them instantly
+- Keeps your server current without requiring you to visit external download sites or use the file manager
+
+## Accessing the plugin manager
+
+<Steps>
+  <Step title="Log in to the panel">
+    Go to [panel.sculkhosting.com](https://panel.sculkhosting.com) and sign in with your Sculk Hosting account credentials.
+  </Step>
+  <Step title="Select your server">
+    Click on the server you want to manage.
+  </Step>
+  <Step title="Open the Plugins or Mods tab">
+    In the server sidebar, click **Plugins** or **Mods**, depending on your server type. The plugin manager search interface loads.
+  </Step>
+</Steps>
+
+## Installing a plugin
+
+<Steps>
+  <Step title="Navigate to the plugin manager">
+    Open the **Plugins** or **Mods** tab in your server's sidebar as described above.
+  </Step>
+  <Step title="Search for the plugin">
+    Type the plugin or mod name into the search bar. Results appear as you type.
+  </Step>
+  <Step title="Click Install">
+    Find the plugin you want in the results and click **Install**. The panel downloads and places the file automatically.
+  </Step>
+  <Step title="Restart your server">
+    Most plugins only load on startup. Restart your server from the **Console** tab for the plugin to take effect.
+  </Step>
+</Steps>
+
+## Updating installed plugins
+
+When a newer version of an installed plugin is available, an **Update** button appears next to it in the plugin manager. Click **Update** to download and replace the file. Restart your server afterwards to load the new version.
+
+<Note>
+  Only plugins listed in the panel's plugin library appear in search results. If you need to install a plugin or mod that isn't listed, download the JAR file from its official source and upload it manually using the [file manager](/panel/file-manager).
+</Note>
+
+<Warning>
+  Always test new plugins on a development or staging server, or take a backup before installing on your live server. Some plugins conflict with others or alter world data in ways that are difficult to reverse. Go to the **Backups** tab and create a snapshot before installing anything unfamiliar.
+</Warning>

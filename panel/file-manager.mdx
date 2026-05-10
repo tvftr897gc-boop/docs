@@ -1,0 +1,76 @@
+---
+title: "Managing Server Files with the File Manager"
+description: "Browse, edit, upload, and organize your game server files using the Sculk Hosting web-based file manager — no FTP client or SSH access required."
+---
+
+The Sculk Hosting file manager lets you work with your server's files entirely from your browser. You can browse directories, open and edit configuration files, and upload content through a drag-and-drop interface — all without installing an FTP client or configuring SSH. For large bulk transfers, SFTP access is also available directly from the panel.
+
+## What the file manager does
+
+From the file manager you can:
+
+- Browse your server's full directory structure
+- Open and edit text files such as `server.properties` or `config.yml` in an inline editor
+- Upload files by dragging them from your desktop or using the upload button
+- Create new files and folders, rename existing ones, and delete what you no longer need
+- Download individual files to your local machine
+
+## Accessing the file manager
+
+<Steps>
+  <Step title="Log in to the panel">
+    Go to [panel.sculkhosting.com](https://panel.sculkhosting.com) and sign in with your Sculk Hosting account credentials.
+  </Step>
+  <Step title="Select your server">
+    Click on the server you want to manage.
+  </Step>
+  <Step title="Open the Files tab">
+    In the server sidebar, click **Files**. The file manager opens and displays your server's root directory.
+  </Step>
+</Steps>
+
+## Uploading files
+
+To upload one or more files, open the directory where you want the files to land, then either:
+
+- **Drag and drop** — drag files from your desktop directly onto the file manager window, or
+- **Use the upload button** — click the **Upload** button in the top-right area of the file manager and select files from your local file picker
+
+Both methods work for plugin JARs, configuration files, resource packs, and other assets of reasonable size.
+
+<Tip>
+  For large world uploads or bulk mod transfers — anything over a few hundred megabytes — use SFTP instead of the web uploader. It is significantly faster and handles large file sets more reliably.
+</Tip>
+
+## Editing files
+
+Click any file in the file manager to open it in the inline editor. The editor supports syntax highlighting for common formats such as YAML, JSON, and `.properties` files. Make your changes and click **Save** to write them to disk. No download-edit-reupload cycle needed.
+
+## Creating and deleting files and folders
+
+- To create a new file or folder, click the **New File** or **New Folder** button and enter a name.
+- To delete a file or folder, right-click it (or use the action menu) and select **Delete**.
+
+<Warning>
+  Deleting files is permanent and cannot be undone from the file manager. Before removing anything important, go to the **Backups** tab and create a manual backup so you can restore if needed.
+</Warning>
+
+## Using SFTP for bulk uploads
+
+The panel provides SFTP credentials you can use with any SFTP-capable client such as FileZilla or WinSCP.
+
+<Steps>
+  <Step title="Find your SFTP credentials">
+    In the server sidebar, look for the **SFTP Settings** section. Your SFTP host, port, and username are listed there. Use your panel account password to authenticate.
+  </Step>
+  <Step title="Connect with your SFTP client">
+    Open your SFTP client, enter the host and port from the panel, and log in with your credentials.
+  </Step>
+  <Step title="Transfer your files">
+    Navigate to the target directory and drag or copy your files across. Large transfers complete much faster over SFTP than through the web uploader.
+  </Step>
+</Steps>
+
+<Note>
+  SFTP gives you the same view of your files as the web file manager. Changes made over SFTP are reflected immediately in the panel.
+</Note>

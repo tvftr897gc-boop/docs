@@ -1,0 +1,75 @@
+---
+title: "Backing Up and Restoring Your Game Server"
+description: "Sculk Hosting runs automatic scheduled backups of your game server and lets you restore any snapshot instantly with a single click from the panel."
+---
+
+Sculk Hosting automatically backs up your server on a regular schedule so you always have a recent snapshot to fall back on. If something goes wrong — a bad plugin install, an accidental deletion, or a corrupted world — you can restore any snapshot with a single click from the panel and your server restarts automatically with that data in place.
+
+## What backups do
+
+- Run automatically in the background on a schedule, without any action required from you
+- Capture a point-in-time snapshot of your server files and world data
+- Let you restore any saved snapshot with one click — no manual file handling needed
+- Allow you to roll back to any previous state instantly if something breaks
+
+## Accessing backups
+
+<Steps>
+  <Step title="Log in to the panel">
+    Go to [panel.sculkhosting.com](https://panel.sculkhosting.com) and sign in with your Sculk Hosting account credentials.
+  </Step>
+  <Step title="Select your server">
+    Click on the server you want to manage.
+  </Step>
+  <Step title="Open the Backups tab">
+    In the server sidebar, click **Backups**. You'll see a list of all available snapshots with timestamps.
+  </Step>
+</Steps>
+
+## Creating a manual backup
+
+You can create a backup at any time — not just on the automatic schedule. This is especially useful before making configuration changes or installing new plugins.
+
+<Steps>
+  <Step title="Go to the Backups tab">
+    Open the **Backups** tab in your server's sidebar.
+  </Step>
+  <Step title="Click Create Backup">
+    Click the **Create Backup** button in the top-right corner of the backups page.
+  </Step>
+  <Step title="Name your backup (optional)">
+    Enter a descriptive name for the backup — for example, `before-plugin-install` — so you can identify it later. This step is optional; the panel will generate a name from the timestamp if you leave it blank.
+  </Step>
+  <Step title="Wait for completion">
+    The panel runs the backup in the background. A status indicator shows when it's in progress and when it has completed successfully.
+  </Step>
+</Steps>
+
+<Tip>
+  Create a manual backup before installing new plugins, updating mods, or making major changes to your server configuration. Automatic backups run on a schedule, but a manual snapshot gives you a precise restore point tied to a specific moment.
+</Tip>
+
+## Restoring from a backup
+
+<Steps>
+  <Step title="Go to the Backups tab">
+    Open the **Backups** tab and review the list of available snapshots.
+  </Step>
+  <Step title="Find the snapshot you want">
+    Locate the backup by its name or timestamp. Manual backups you named will be easy to identify; automatic backups are labeled with their creation time.
+  </Step>
+  <Step title="Click Restore">
+    Click the **Restore** button next to the snapshot you want to roll back to.
+  </Step>
+  <Step title="Confirm the restore">
+    A confirmation prompt will appear. Confirm, and the panel will restore that snapshot and restart your server automatically with the recovered data.
+  </Step>
+</Steps>
+
+## Automatic scheduled backups
+
+Sculk Hosting runs backups automatically on a recurring schedule in the background. You don't need to configure or trigger them — they run silently and appear in your backups list as they complete. The automatic backup schedule ensures you always have a recent recovery point even if you forget to create a manual one.
+
+<Warning>
+  Panel backups are a convenience feature, not a substitute for your own off-site copies. For critical world data, download a copy to your own storage regularly. Sculk Hosting's Terms of Service describe the scope of backup retention and liability — review them to understand what is and isn't covered.
+</Warning>

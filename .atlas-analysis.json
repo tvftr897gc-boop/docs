@@ -1,0 +1,83 @@
+{
+  "projectType": "saas",
+  "projectName": "Sculk Hosting",
+  "projectDescription": "High-performance game server hosting with instant setup, DDoS protection, and a custom control panel — built for gamers.",
+  "theme": "almond",
+  "primaryColor": "#5dd5fc",
+  "lightColor": "#94e5fc",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/create-account",
+              "getting-started/choose-a-plan",
+              "getting-started/quick-start"
+            ]
+          },
+          {
+            "group": "Control Panel",
+            "pages": [
+              "panel/overview",
+              "panel/console",
+              "panel/file-manager",
+              "panel/plugin-manager",
+              "panel/backups"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/ddos-protection",
+              "features/server-locations",
+              "features/performance",
+              "features/sub-users"
+            ]
+          },
+          {
+            "group": "Billing & Account",
+            "pages": [
+              "billing/plans-pricing",
+              "billing/billing-cycles",
+              "billing/cancellation",
+              "billing/sla"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/contact-support",
+              "help/terms-of-service"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Instant game server setup",
+    "Enterprise DDoS protection",
+    "Custom web-based control panel",
+    "One-click plugin and mod installer",
+    "Automatic scheduled backups with one-click restore",
+    "Global server locations (US, EU, Asia-Pacific)",
+    "AMD Ryzen 9 9950X hardware with DDR5 RAM",
+    "24/7 human support",
+    "Sub-user permission system",
+    "Flexible billing cycles (monthly, quarterly, yearly)"
+  ],
+  "publicApiSurface": [
+    "panel.sculkhosting.com — game server control panel",
+    "my.sculkhosting.com — billing and client area",
+    "my.sculkhosting.com/tickets — support ticket system",
+    "my.sculkhosting.com/status — service status page",
+    "support@sculkhosting.com — customer support email",
+    "discord.gg/tesjNBszQe — community Discord"
+  ]
+}

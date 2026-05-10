@@ -1,0 +1,66 @@
+---
+title: "Using the Server Console in Sculk Hosting"
+description: "Execute server commands, monitor live output, and debug your game server from the Sculk Hosting browser-based console — no SSH or RCON client needed."
+---
+
+The Sculk Hosting console gives you a live terminal connection to your game server directly from your browser. You can run commands, watch output scroll in real time, and diagnose problems without installing any additional software or setting up SSH access. Everything you need is available the moment you open the panel.
+
+## What the console does
+
+The console streams your server's output as it happens, so you always have an up-to-date view of what's going on. From a single interface you can:
+
+- Execute server commands and see the response immediately
+- Monitor player activity, chunk loading, and plugin messages
+- Catch errors and warnings as they appear in the log
+- Restart or stop the server and watch the shutdown sequence in real time
+
+All of this happens in your browser — no RCON client, no SSH session, and no third-party tool required.
+
+## Accessing the console
+
+<Steps>
+  <Step title="Log in to the panel">
+    Go to [panel.sculkhosting.com](https://panel.sculkhosting.com) and sign in with your Sculk Hosting account credentials.
+  </Step>
+  <Step title="Select your server">
+    Click on the server you want to manage from your server list.
+  </Step>
+  <Step title="Open the Console tab">
+    In the server sidebar, click **Console**. The live terminal loads immediately and begins streaming output.
+  </Step>
+</Steps>
+
+## Running commands
+
+Type a command into the input field at the bottom of the console and press **Enter** to send it. The command runs on your server and any response appears in the output above.
+
+Common Minecraft examples:
+
+| Command | What it does |
+|---|---|
+| `stop` | Gracefully shuts down the server |
+| `say Hello, everyone!` | Broadcasts a message to all online players |
+| `list` | Prints the names of all currently connected players |
+| `op username` | Grants operator permissions to a player |
+| `gamemode creative username` | Changes a player's game mode |
+
+<Info>
+  Minecraft commands in the console do not require a leading `/`. Type `stop` rather than `/stop` — the `/` prefix is only needed in the in-game chat.
+</Info>
+
+## Reading console output
+
+The console output is color-coded and timestamped. Here are the most common message types you'll encounter:
+
+- **Server startup** — Lines beginning with `[Server thread/INFO]` show the server loading worlds, registering plugins, and binding to its port. A clean startup ends with `Done!`
+- **Player connections** — You'll see join and leave messages like `PlayerName joined the game` and `PlayerName left the game`
+- **Warnings** — Lines marked `WARN` flag non-critical issues such as slow chunk loading or incompatible plugin versions
+- **Errors** — Lines marked `ERROR` or `SEVERE` indicate something went wrong; these lines are the starting point for diagnosing crashes
+
+<Tip>
+  If your server fails to start, the console is the first place to check. Scroll up through the output to find the first `ERROR` or `SEVERE` line — this is usually the root cause, and everything after it may be a cascade from that single problem.
+</Tip>
+
+<Note>
+  The console is entirely browser-based. You do not need SSH, RCON, or any desktop client to interact with your server. If you need to grant another person console access, use the sub-user system in the panel to give them the specific permissions they need.
+</Note>
