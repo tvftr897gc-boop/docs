@@ -1,7 +1,10 @@
 ---
 title: "Pregenerating Worlds with Chunky"
 description: "Install the Chunky plugin or mod and pre-generate your Minecraft world to eliminate lag spikes when players explore new areas — with safe limits to protect your storage."
+icon: "globe"
 ---
+
+
 
 Chunky is a free, open-source plugin and mod that pre-generates chunks of your Minecraft world ahead of time. By generating terrain before players reach it, you eliminate the lag spikes that happen when the server has to create new chunks on the fly. The result is a noticeably smoother experience, especially on survival and exploration servers.
 
@@ -13,7 +16,6 @@ Pre-generation does come with tradeoffs:
 - **Diminishing returns.** Players almost never travel more than a few thousand blocks from spawn. Pre-generating beyond that wastes resources on terrain no one will see.
 
 **Always cap the radius of your pre-generation.** A radius between **2,000 and 5,000 blocks** works well for most servers.
-
 
 ## Installing Chunky
 
@@ -62,7 +64,7 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
   <Step title="Set the world">
     In the console, set the world Chunky should target. For most servers this is your overworld:
 
-    ```
+    ```text
     chunky world world
     ```
 
@@ -71,31 +73,31 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
   <Step title="Set the center point">
     By default Chunky generates around `0, 0`. To center on your spawn or a specific location:
 
-    ```
+    ```text
     chunky center 0 0
     ```
   </Step>
   <Step title="Set a safe radius">
     **This is the most important step.** Cap the radius to control how much disk space pre-generation will consume:
 
-    ```
+    ```text
     chunky radius 3000
     ```
 
     Recommended radii:
 
-    | Server size           | Radius (blocks) | Approximate world size |
-    | --------------------- | --------------- | ---------------------- |
-    | Small / private       | 1,000–2,000     | ~200–500 MB            |
-    | Medium community      | 2,000–5,000     | ~1–3 GB                |
-    | Large public          | 5,000–10,000    | ~3–10 GB               |
+    | Server size | Radius (blocks) | Approximate world size |
+    | --- | --- | --- |
+    | Small / private | 1,000–2,000 | ~200–500 MB |
+    | Medium community | 2,000–5,000 | ~1–3 GB |
+    | Large public | 5,000–10,000 | ~3–10 GB |
 
     Stay well below your plan's storage limit. Check current usage in the panel sidebar before deciding.
   </Step>
   <Step title="Start generation">
     Begin pre-generating:
 
-    ```
+    ```text
     chunky start
     ```
 
@@ -104,13 +106,13 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
   <Step title="Monitor and pause if needed">
     Check progress at any time:
 
-    ```
+    ```text
     chunky status
     ```
 
     Pause or cancel if you need to:
 
-    ```
+    ```text
     chunky pause
     chunky cancel
     ```
@@ -121,11 +123,9 @@ Once Chunky is installed and the server has restarted, run pre-generation comman
 
 - **Generate during off-peak hours.** Pre-generation is CPU-intensive and can affect performance for online players. Run it overnight or when your server is quiet.
 - **Throttle if needed.** Lower Chunky's CPU impact by reducing how aggressively it generates:
-
-  ```
+  ```text
   chunky pattern concentric
   ```
-
 - **Pre-generate the Nether at 1/8th radius.** The Nether uses an 8:1 coordinate ratio with the overworld. If your overworld radius is 3,000, set the Nether radius to about 375 to cover the equivalent area without wasting disk.
 - **Don't re-run unnecessarily.** Once chunks are generated, they're saved permanently. You only need to pre-generate again if you expand the playable area.
 
