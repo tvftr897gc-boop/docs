@@ -80,5 +80,11 @@
       "dark": "#0b0d12"
     },
     "decoration": "windows"
+  },
+  "interaction": {
+    "drilldown": true
+  },
+  "metadata": {
+    "timestamp": true
   }
 }
