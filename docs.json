@@ -44,15 +44,6 @@
             ]
           },
           {
-            "group": "Features",
-            "pages": [
-              "features/ddos-protection",
-              "features/server-locations",
-              "features/performance",
-              "features/sub-users"
-            ]
-          },
-          {
             "group": "Billing & Account",
             "pages": [
               "billing/plans-pricing",
@@ -65,8 +56,7 @@
             "group": "Help",
             "pages": [
               "help/faq",
-              "help/contact-support",
-              "help/terms-of-service"
+              "help/contact-support"
             ]
           }
         ]
